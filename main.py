@@ -20,6 +20,7 @@ def check_answer(guess, a_followers, b_followers):
 
 # Display ASCII art
 print(logo)
+score = 0
 
 # Generate game data
 account_a = random.choice(data)
@@ -40,10 +41,14 @@ a_follower_count = account_a["follower_count"]
 b_follower_count = account_b["follower_count"]
 is_correct = check_answer(guess, a_follower_count, b_follower_count)
 
-
 # User feedback on their answer
-
 # Score keeping
+if is_correct:
+   score += 1
+   print(f"You're right! Current score: {score}")
+else:
+   print(f"Sorry, you're wrong. Final score: {score}")
+
 
 # Make game repeatable
 
