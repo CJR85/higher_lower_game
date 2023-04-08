@@ -22,11 +22,11 @@ def check_answer(guess, a_followers, b_followers):
 print(logo)
 score = 0
 continue_game = True
+# Generate game data
 account_b = random.choice(data)
 
 # Make game repeatable
 while continue_game:
-  # Generate game data
 
   # Making account at position B become account at position A
   account_a = account_b
@@ -48,6 +48,9 @@ while continue_game:
   b_follower_count = account_b["follower_count"]
   is_correct = check_answer(guess, a_follower_count, b_follower_count)
 
+  # Clear screen between rounds
+  print("\033[2J\033[1;1H")
+
   # User feedback on their answer
   # Score keeping
   if is_correct:
@@ -60,5 +63,3 @@ while continue_game:
 
 
 
-
-# Clear screen between rounds
