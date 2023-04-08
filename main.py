@@ -1,4 +1,4 @@
-from art import logo
+from art import logo, vs
 from game_data import data
 import random
 
@@ -19,7 +19,8 @@ if account_a == account_b:
     account_a = random.choice(data)
 
 print(f"Compare A: {format_data(account_a)}.")
-print(f"Compare B: {format_data(account_b)}.")
+print(vs)
+print(f"Against B: {format_data(account_b)}.")
 
 # Ask user to enter a guess
 
