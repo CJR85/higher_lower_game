@@ -1,6 +1,15 @@
+from art import logo
+from game_data import data
+import random
+
 # Display ASCII art
+print(logo)
 
 # Generate game data
+account_a = random.choice(data)
+account_b = random.choice(data)
+if account_a == account_b:
+    account_a = random.choice(data)
 
 # Format data into printable data
 
