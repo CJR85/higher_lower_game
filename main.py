@@ -50,6 +50,7 @@ while continue_game:
 
   # Clear screen between rounds
   print("\033[2J\033[1;1H")
+  print(logo)
 
   # User feedback on their answer
   # Score keeping
