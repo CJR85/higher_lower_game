@@ -4,10 +4,19 @@ import random
 
 # Format data into printable data
 def format_data(account):
+  """Takes account data and returns printable format"""
   account_name = account["name"]
   account_descr = account["description"]
   account_country = account["country"]
   return (f"{account_name} a {account_descr} from {account_country}")
+
+# Use if statement to check if user is correct
+def check_answer(guess, a_followers, b_followers):
+   """Takes users guess & follower counts & returns answer"""
+   if a_followers > b_followers:
+      return guess == "a"
+   else:
+      return guess == "b"
 
 # Display ASCII art
 print(logo)
@@ -23,10 +32,14 @@ print(vs)
 print(f"Against B: {format_data(account_b)}.")
 
 # Ask user to enter a guess
+guess = input("Who has more followers? Type 'A' or 'B': ").lower()
 
 # Check if user's guess is correct
 # Get follower count of each account
-# Use if statement to check if user is correct
+a_follower_count = account_a["follower_count"]
+b_follower_count = account_b["follower_count"]
+is_correct = check_answer(guess, a_follower_count, b_follower_count)
+
 
 # User feedback on their answer
 
